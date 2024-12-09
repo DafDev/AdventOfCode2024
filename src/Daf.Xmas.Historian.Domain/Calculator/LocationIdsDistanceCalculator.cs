@@ -1,14 +1,16 @@
 ﻿using Daf.Xmas.Historian.Domain.Infrastructure;
+using Daf.Xmas.Historian.Domain.Models;
+using Daf.Xmas.Historian.Domain.Sorter;
 
-namespace Daf.Xmas.Historian.Domain;
+namespace Daf.Xmas.Historian.Domain.Calculator;
 
-public class LocationIdsDistanceCalculator(IGetLocationIds locationIdsGetter, ISortLocationIds locationIdsSorter) 
+internal class LocationIdsDistanceCalculator(IGetLocationIds locationIdsGetter, ISortLocationIds locationIdsSorter) 
     : ICalculateLocationIdsDistance
 {
-    public int CalculateDistanceFromLocationIdsFile(string filePath)
+    public int CalculateTotalDistance()
     {
         var locationIds = locationIdsSorter
-            .SortLocationIds(LocationIds.FromDto(locationIdsGetter.GetLocationIds(filePath)));
+            .SortLocationIds(LocationIds.FromDto(locationIdsGetter.GetLocationIds()));
         if (locationIds.FirstHalf.Count() != locationIds.SecondHalf.Count())
             throw new ArgumentException("LocationIds are not the same size.");
         var totalDistance = 0;

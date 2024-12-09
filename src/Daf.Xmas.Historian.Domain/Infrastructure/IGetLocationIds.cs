@@ -1,6 +1,9 @@
-﻿namespace Daf.Xmas.Historian.Domain.Infrastructure;
+﻿using Daf.Xmas.Historian.Domain.Models;
+
+namespace Daf.Xmas.Historian.Domain.Infrastructure;
 
 public interface IGetLocationIds
 {
-    LocationIdsDto GetLocationIds(string pathFile);
+    string ConnectionString { get; }
+    LocationIdsDto GetLocationIds();
 }

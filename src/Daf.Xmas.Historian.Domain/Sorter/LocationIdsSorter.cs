@@ -1,6 +1,8 @@
-﻿namespace Daf.Xmas.Historian.Domain;
+﻿using Daf.Xmas.Historian.Domain.Models;
 
-public class LocationIdsSorter : ISortLocationIds
+namespace Daf.Xmas.Historian.Domain.Sorter;
+
+internal class LocationIdsSorter : ISortLocationIds
 {
     public LocationIds SortLocationIds(LocationIds locationIds)
     {

@@ -1,4 +1,7 @@
-﻿using Daf.Xmas.Historian.Domain.Infrastructure;
+﻿using Daf.Xmas.Historian.Domain.Calculator;
+using Daf.Xmas.Historian.Domain.Infrastructure;
+using Daf.Xmas.Historian.Domain.Models;
+using Daf.Xmas.Historian.Domain.Sorter;
 using FluentAssertions;
 using Moq;
 
@@ -20,7 +23,7 @@ public class LocationIdsDistanceCalculatorTests
         List<int> firstHalf = [5, 89, 4, 0];
         List<int> secondHalf = [67, 4, 367, 99];
         var locationIdsDto = new LocationIdsDto(firstHalf, secondHalf);
-        _locationIdsGetter.Setup(getter => getter.GetLocationIds(It.IsAny<string>()))
+        _locationIdsGetter.Setup(getter => getter.GetLocationIds())
             .Returns(locationIdsDto);
         var locationIdsSorted = new LocationIds()
         {
@@ -30,7 +33,7 @@ public class LocationIdsDistanceCalculatorTests
         _locationIdsSorter.Setup(sorter => sorter.SortLocationIds(It.IsAny<LocationIds>())).Returns(locationIdsSorted);
         var expected = 439;
         // When
-        var actual = _sut.CalculateDistanceFromLocationIdsFile("fileName");
+        var actual = _sut.CalculateTotalDistance();
         // Should
         actual.Should().Be(expected);
 

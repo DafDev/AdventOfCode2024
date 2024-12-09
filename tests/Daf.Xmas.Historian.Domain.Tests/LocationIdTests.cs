@@ -1,4 +1,5 @@
-﻿using FluentAssertions;
+﻿using Daf.Xmas.Historian.Domain.Models;
+using FluentAssertions;
 
 namespace Daf.Xmas.Historian.Domain.Tests;
 

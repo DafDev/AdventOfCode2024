@@ -1,9 +1,9 @@
-﻿namespace Daf.Xmas.Historian.Domain;
+﻿namespace Daf.Xmas.Historian.Domain.Models;
 
 public class LocationIds
 {
-    public IEnumerable<int> FirstHalf { get; set; }
-    public IEnumerable<int> SecondHalf { get; set; }
+    public IEnumerable<int> FirstHalf { get; set; } = [];
+    public IEnumerable<int> SecondHalf { get; set; } = [];
 
     public static LocationIds FromDto(LocationIdsDto locationIdsDto)
     {
