@@ -8,11 +8,9 @@ internal class LocationIdsSorter : ISortLocationIds
     {
         var sortedLocations = new LocationIds()
         {
-            FirstHalf = [..locationIds.FirstHalf.ToList()],
-            SecondHalf = [..locationIds.SecondHalf.ToList()],
+            FirstHalf = [..locationIds.FirstHalf.Order()],
+            SecondHalf = [..locationIds.SecondHalf.Order()],
         };
-        sortedLocations.FirstHalf.ToList().Sort();
-        sortedLocations.SecondHalf.ToList().Sort();
         return sortedLocations;
     }
 }

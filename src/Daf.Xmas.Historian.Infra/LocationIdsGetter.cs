@@ -15,7 +15,9 @@ internal class LocationIdsGetter : IGetLocationIds
         {
             // Create an instance of StreamReader to read from a file.
             // The using statement also closes the StreamReader.
-            using StreamReader sr = new (ConnectionString);
+            var baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            var filepath = Path.Combine(baseDirectory, ConnectionString);
+            using StreamReader sr = new (filepath);
             List<string> firstHalfList = [];
             List<string> secondHalfList = [];
             // Read and display lines from the file until the end of
