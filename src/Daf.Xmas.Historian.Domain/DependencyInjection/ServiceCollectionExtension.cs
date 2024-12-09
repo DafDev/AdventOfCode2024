@@ -1,4 +1,5 @@
 ﻿using Daf.Xmas.Historian.Domain.Calculator;
+using Daf.Xmas.Historian.Domain.Similarities;
 using Daf.Xmas.Historian.Domain.Sorter;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -10,6 +11,7 @@ public static class ServiceCollectionExtension
     {
         services.AddTransient<ISortLocationIds, LocationIdsSorter>();
         services.AddScoped<ICalculateLocationIdsDistance, LocationIdsDistanceCalculator>();
+        services.AddScoped<ICalculateSimilarities, SimilaritiesCalculator>();    
         return services;
     }
 }

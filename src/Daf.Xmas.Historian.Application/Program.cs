@@ -2,6 +2,7 @@
 
 using Daf.Xmas.Historian.Domain.Calculator;
 using Daf.Xmas.Historian.Domain.DependencyInjection;
+using Daf.Xmas.Historian.Domain.Similarities;
 using Daf.Xmas.Historian.Infra.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -11,7 +12,7 @@ var services = new ServiceCollection()
     .AddDomain()
     .BuildServiceProvider();
 
-var calculator = services.GetRequiredService<ICalculateLocationIdsDistance>();
+var similarities = services.GetRequiredService<ICalculateSimilarities>();
 
-Console.WriteLine("Result of total distance");
-Console.WriteLine(calculator.CalculateTotalDistance());
+Console.WriteLine("Result of total similarities");
+Console.WriteLine(similarities.CalculateSimilarity());
