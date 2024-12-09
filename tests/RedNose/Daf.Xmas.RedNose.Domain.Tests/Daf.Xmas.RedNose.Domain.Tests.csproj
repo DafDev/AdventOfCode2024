@@ -21,7 +21,9 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\..\src\RedNose\Daf.Xmas.RedNose.Application\Daf.Xmas.RedNose.Application.csproj" />
       <ProjectReference Include="..\..\..\src\RedNose\Daf.Xmas.RedNose.Domain\Daf.Xmas.RedNose.Domain.csproj" />
+      <ProjectReference Include="..\..\..\src\RedNose\Daf.Xmas.RedNose.Infra\Daf.Xmas.RedNose.Infra.csproj" />
     </ItemGroup>
 
 </Project>
