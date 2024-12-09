@@ -8,4 +8,9 @@
     <ItemGroup>
         <InternalsVisibleTo Include="$(AssemblyName).Tests" />
     </ItemGroup>
+    <ItemGroup>
+      <Reference Include="JetBrains.ReSharper.TestRunner.Abstractions">
+        <HintPath>..\..\..\..\..\..\..\Program Files\JetBrains\Rider\r2r\2024.3.0R\A2EF948D5832C6BB33EEC5846BAF524\TestRunner\netcoreapp3.0\JetBrains.ReSharper.TestRunner.Abstractions.dll</HintPath>
+      </Reference>
+    </ItemGroup>
 </Project>

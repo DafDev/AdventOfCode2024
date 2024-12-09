@@ -1,4 +1,4 @@
-﻿namespace Daf.Xmas.RedNose.Domain.Tests;
+﻿namespace Daf.Xmas.RedNose.Domain.Models.Tests;
 
 public class LevelsTestsAllIncreaseOrDecreaseDataByAtLeastOneAtMostThree : TheoryData<Report, bool>
 {

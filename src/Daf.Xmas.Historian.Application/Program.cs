@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using Daf.Xmas.Historian.Domain.Calculator;
+﻿using Daf.Xmas.Historian.Domain.Calculator;
 using Daf.Xmas.Historian.Domain.DependencyInjection;
 using Daf.Xmas.Historian.Domain.Similarities;
 using Daf.Xmas.Historian.Infra.DependencyInjection;

@@ -1,6 +1,6 @@
 ﻿using FluentAssertions;
 
-namespace Daf.Xmas.RedNose.Domain.Tests;
+namespace Daf.Xmas.RedNose.Domain.Models.Tests;
 
 public class LevelsTest
 {
