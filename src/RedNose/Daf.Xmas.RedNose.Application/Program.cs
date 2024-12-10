@@ -11,4 +11,4 @@ var services = new ServiceCollection()
 var safetyReport = services.GetRequiredService<ICheckReports>();
 
 Console.WriteLine("Number of safe reports");
-Console.WriteLine(safetyReport.HowManyReportsAreSafe());
+Console.WriteLine(safetyReport.HowManyReportsAreSafe(true));

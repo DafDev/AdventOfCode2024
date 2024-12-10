@@ -24,4 +24,17 @@ public class ReportCheckerTests
         // Should
         actual.Should().Be(expectedCount);
     }
+    
+    [Theory, ClassData(typeof(ReportCheckerDampenedTestsData))]
+    public void CheckDampenedReportsTests(IEnumerable<ReportDto> reports, int expectedCount)
+    {
+        // Given
+        _reportsGetter.Setup(x => x.GetAllReports()).Returns(reports);
+        
+        // When
+        var actual = _sut.HowManyReportsAreSafe(true);
+        
+        // Should
+        actual.Should().Be(expectedCount);
+    }
 }

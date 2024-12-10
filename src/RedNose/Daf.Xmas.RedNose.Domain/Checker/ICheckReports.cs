@@ -4,5 +4,5 @@ namespace Daf.Xmas.RedNose.Domain.Checker;
 
 public interface ICheckReports
 {
-    int HowManyReportsAreSafe();
+    int HowManyReportsAreSafe(bool isDampened = false);
 }

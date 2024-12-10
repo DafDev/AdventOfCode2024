@@ -13,7 +13,17 @@ public class LevelsTest
         // Should
         actual.Should().Be(expected);
     }
-
+    
+    [Theory, ClassData(typeof(LevelsTestsProblemDampened))]
+    public void WhenProblemDampenedShouldReturnExpected(Report report, bool expected)
+    {
+        // When
+        bool actual = report.IsProblemDampened();
+        
+        // Should
+        actual.Should().Be(expected);
+    }    
+    
     [Fact]
     public void FromDtoShouldReturnCorrectLevels()
     {
