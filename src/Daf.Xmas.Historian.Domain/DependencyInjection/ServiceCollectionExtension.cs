@@ -1,10 +1,12 @@
-﻿using Daf.Xmas.Historian.Domain.Calculator;
+﻿using System.Diagnostics.CodeAnalysis;
+using Daf.Xmas.Historian.Domain.Calculator;
 using Daf.Xmas.Historian.Domain.Similarities;
 using Daf.Xmas.Historian.Domain.Sorter;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Daf.Xmas.Historian.Domain.DependencyInjection;
 
+[ExcludeFromCodeCoverage]
 public static class ServiceCollectionExtension
 {
     public static IServiceCollection AddDomain(this IServiceCollection services)

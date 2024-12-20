@@ -1,15 +1,15 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using Daf.Xmas.Historian.Domain.Infrastructure;
+using Daf.Xmas.RedNose.Domain.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Daf.Xmas.Historian.Infra.DependencyInjection;
+namespace Daf.Xmas.RedNose.Infra.DependencyInjection;
 
 [ExcludeFromCodeCoverage]
 public static class ServiceCollectionExtension
 {
     public static IServiceCollection AddInfra(this IServiceCollection services)
     {
-        services.AddScoped<IGetLocationIds, LocationIdsGetter>();
+        services.AddScoped<IGetReports, ReportsGetter>();
         return services;
     }
 }
