@@ -21,4 +21,15 @@ public class InstructionsExtractorTests
         //Assert
         actual.Should().BeEquivalentTo(expected);
     }
+    
+    [Theory, ClassData(typeof(InstructionsExtractorTestsData))]
+    public void GetDataTestsWithTogglerEnabledShouldReturnCorrectData(string input, IEnumerable<Instruction> expected)
+    {
+        //Act
+        var actual = _sut.ExtractInstructionsWithToggleEnabledFromCorruptedData(input);
+
+        //Assert
+        actual.Should().BeEquivalentTo(expected);
+        
+    }
 }
