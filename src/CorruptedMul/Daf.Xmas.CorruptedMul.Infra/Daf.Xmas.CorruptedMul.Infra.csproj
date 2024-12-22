@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Daf.Xmas.CorruptedMul.Domain\Daf.Xmas.CorruptedMul.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
