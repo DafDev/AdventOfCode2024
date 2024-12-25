@@ -10,4 +10,4 @@ var services = new ServiceCollection()
     
 var instructionComputer = services.GetRequiredService<IComputeInstructionsResult>();
 
-Console.WriteLine($"Instruction Computer Result:{instructionComputer.ComputeInstructionsResult()}");
+Console.WriteLine($"Instruction Computer Result:{instructionComputer.ComputeInstructionsResult(true)}");

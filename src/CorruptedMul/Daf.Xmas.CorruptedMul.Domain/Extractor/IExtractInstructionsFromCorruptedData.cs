@@ -4,7 +4,5 @@ namespace Daf.Xmas.CorruptedMul.Domain.Extractor;
 
 public interface IExtractInstructionsFromCorruptedData
 {
-    IEnumerable<Instruction> ExtractInstructionsFromCorruptedData(string input);
-    IEnumerable<Instruction> ExtractInstructionsWithToggleEnabledFromCorruptedData(string input);
-
+    IEnumerable<Instruction> ExtractInstructionsFromCorruptedData(string input, bool isToggleEnabled = false);
 }

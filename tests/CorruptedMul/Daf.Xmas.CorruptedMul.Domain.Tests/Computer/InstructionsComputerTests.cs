@@ -21,7 +21,7 @@ public class InstructionsComputerTests
     {
         // Given
         _dataExtractor.Setup(extractor 
-            => extractor.ExtractInstructionsFromCorruptedData(It.IsAny<string>()))
+            => extractor.ExtractInstructionsFromCorruptedData(It.IsAny<string>(),false))
             .Returns(instructions);
         
         // When

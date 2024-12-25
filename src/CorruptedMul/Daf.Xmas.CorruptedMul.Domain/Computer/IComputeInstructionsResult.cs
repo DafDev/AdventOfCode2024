@@ -4,5 +4,5 @@ namespace Daf.Xmas.CorruptedMul.Domain.Computer;
 
 public interface IComputeInstructionsResult
 {
-    int ComputeInstructionsResult();
+    int ComputeInstructionsResult(bool isToggleEnabled = false);
 }
